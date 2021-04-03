@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/resul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:height="100dp"
+            android:text="Hola, Resultado-Ricardo"
+            android:textAlignment="textEnd"
+            android:textSize="36sp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-8dp"
+            android:padding="0dp"
+            app:columnCount="4"
+            app:orientation="horizontal"
+            app:rowCount="6">
+
+            <Button
+                android:id="@+id/botonCleaner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/botonDividir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/botonMulti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="X" />
+
+            <Button
+                android:id="@+id/botonBorrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Borrar" />
+
+            <Button
+                android:id="@+id/botonSiete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/botonOcho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/botonNueve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/botonMenos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/botonCuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/botonCinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/botonSeis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/botonSuma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/botonUno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/botonDos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/botonTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/botonIgual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="=" />
+
+            <Button
+                android:id="@+id/botonCero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/botonPunto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="." />
+        </androidx.gridlayout.widget.GridLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
