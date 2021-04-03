@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnC,btnM,btnD,btnS,btnR,btnP,btnI,btnB,btnUno,btnDos,btnCero,btnTres,btnCuatro,btnCinco,btnSeis,
+    Button btnC,btnM,btnD,btnS,btnR,btnI,btnB,btnUno,btnDos,btnCero,btnTres,btnCuatro,btnCinco,btnSeis,
     btnSiete,btnOcho,btnNueve;
     TextView respuesta;
-    Double resul;
+    Integer resul;
     String operacion, show, guarda;
 
     @Override
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         btnD = (Button) findViewById(R.id.botonDividir);
         btnS = (Button) findViewById(R.id.botonSuma);
         btnR = (Button) findViewById(R.id.botonMenos);
-        btnP = (Button) findViewById(R.id.botonPunto);
         btnI = (Button) findViewById(R.id.botonIgual);
         btnB = (Button) findViewById(R.id.botonBorrar);
         btnCero = (Button) findViewById(R.id.botonCero);
@@ -61,16 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 respuesta.setText(show);
             }
         });
-
-        btnP.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                show = respuesta.getText().toString();
-                show = show + ".";
-                respuesta.setText(show);
-            }
-        });
-
 
         btnCero.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -205,13 +194,25 @@ public class MainActivity extends AppCompatActivity {
                 show = show + "1";
 
                 switch (operacion){
+                    case "*":
+                        resul = Integer.parseInt(guarda) * Integer.parseInt(respuesta.getText().toString());
+                        respuesta.setText(String.valueOf(resul));
+                        break;
+                    case "/":
+                        resul = Integer.parseInt(guarda) / Integer.parseInt(respuesta.getText().toString());
+                        respuesta.setText(String.valueOf(resul));
+                        break;
+                    case "-":
+                        resul = Integer.parseInt(guarda) - Integer.parseInt(respuesta.getText().toString());
+                        respuesta.setText(String.valueOf(resul));
+                        break;
                     case "+" :
-                        resul = Double.parseDouble(guarda) + Double.parseDouble(respuesta.getText().toString());
+                        resul = Integer.parseInt(guarda) + Integer.parseInt(respuesta.getText().toString());
                         respuesta.setText(String.valueOf(resul));
                         break;
 
-
                 }
+
             }
         });
 

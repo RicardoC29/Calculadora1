@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:background="#ECCFB7"
         android:orientation="vertical">
 
 
@@ -23,6 +24,14 @@
             android:height="100dp"
             android:textAlignment="textEnd"
             android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="155dp"
+            android:layout_height="102dp"
+            android:layout_centerHorizontal="false"
+            android:text="RESULTADO:"
+            android:textSize="24sp" />
 
         <androidx.gridlayout.widget.GridLayout
             android:layout_width="wrap_content"
@@ -40,28 +49,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="C" />
+                android:text="C"
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonDividir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="/" />
+                android:text="/"
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonMulti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="X" />
+                android:text="X"
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonBorrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="Borrar" />
+                android:text="Borrar"
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/botonSiete"
@@ -89,7 +102,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="-" />
+                android:text="-"
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonCuatro"
@@ -117,7 +131,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="+" />
+                android:text="+"
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonUno"
@@ -145,7 +160,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
-                android:text="=" />
+                android:text="="
+                android:textColor="#FF5722" />
 
             <Button
                 android:id="@+id/botonCero"
@@ -154,12 +170,6 @@
                 android:layout_margin="3dp"
                 android:text="0" />
 
-            <Button
-                android:id="@+id/botonPunto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:text="." />
         </androidx.gridlayout.widget.GridLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
