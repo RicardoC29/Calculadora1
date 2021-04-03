@@ -170,6 +170,13 @@
                 android:layout_margin="3dp"
                 android:text="0" />
 
+            <Button
+                android:id="@+id/botonPunto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="." />
+
         </androidx.gridlayout.widget.GridLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

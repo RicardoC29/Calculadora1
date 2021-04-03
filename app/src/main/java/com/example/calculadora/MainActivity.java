@@ -11,9 +11,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button btnC,btnM,btnD,btnS,btnR,btnI,btnB,btnUno,btnDos,btnCero,btnTres,btnCuatro,btnCinco,btnSeis,
-    btnSiete,btnOcho,btnNueve;
+    btnSiete,btnOcho,btnNueve,btnP;
     TextView respuesta;
-    Integer resul;
+    Double resul;
     String operacion, show, guarda;
 
     @Override
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnC = (Button) findViewById(R.id.botonCleaner);
+        btnP = (Button) findViewById(R.id.botonPunto);
         btnM = (Button) findViewById(R.id.botonMulti);
         btnD = (Button) findViewById(R.id.botonDividir);
         btnS = (Button) findViewById(R.id.botonSuma);
@@ -186,6 +187,21 @@ public class MainActivity extends AppCompatActivity {
                 respuesta.setText("");
             }
         });
+        btnS.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                guarda = respuesta.getText().toString();
+                operacion = "+";
+                respuesta.setText("");
+            }
+        });
+        btnP.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                show = respuesta.getText().toString();
+                show = show + ".";
+                respuesta.setText(show);
+            }
+        });
 
         btnI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,19 +211,19 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (operacion){
                     case "*":
-                        resul = Integer.parseInt(guarda) * Integer.parseInt(respuesta.getText().toString());
+                        resul = Double.parseDouble(guarda) * Double.parseDouble(respuesta.getText().toString());
                         respuesta.setText(String.valueOf(resul));
                         break;
                     case "/":
-                        resul = Integer.parseInt(guarda) / Integer.parseInt(respuesta.getText().toString());
+                        resul = Double.parseDouble(guarda) / Double.parseDouble(respuesta.getText().toString());
                         respuesta.setText(String.valueOf(resul));
                         break;
                     case "-":
-                        resul = Integer.parseInt(guarda) - Integer.parseInt(respuesta.getText().toString());
+                        resul = Double.parseDouble(guarda) - Double.parseDouble(respuesta.getText().toString());
                         respuesta.setText(String.valueOf(resul));
                         break;
                     case "+" :
-                        resul = Integer.parseInt(guarda) + Integer.parseInt(respuesta.getText().toString());
+                        resul = Double.parseDouble(guarda) + Double.parseDouble(respuesta.getText().toString());
                         respuesta.setText(String.valueOf(resul));
                         break;
 
