@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -194,6 +195,23 @@ public class MainActivity extends AppCompatActivity {
                 guarda = respuesta.getText().toString();
                 operacion = "+";
                 respuesta.setText("");
+            }
+        });
+
+        btnI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                show = respuesta.getText().toString();
+                show = show + "1";
+
+                switch (operacion){
+                    case "+" :
+                        resul = Double.parseDouble(guarda) + Double.parseDouble(respuesta.getText().toString());
+                        respuesta.setText(String.valueOf(resul));
+                        break;
+
+
+                }
             }
         });
 

@@ -21,7 +21,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="14dp"
             android:height="100dp"
-            android:text="Hola, Resultado-Ricardo"
             android:textAlignment="textEnd"
             android:textSize="36sp" />
 
